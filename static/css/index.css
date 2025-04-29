@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: blanchedalmond;
+   
+    width: 100%;   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.login_box{
+    background-color: fuchsia;
+    width: 50%;
+    height: 60%;
+    border-radius: 20px;
+    box-shadow: 2px 5px 4px rgba(82, 78, 78, 0.719);
+    transition: opacity 2s;
+    opacity: 1;
+    
+}
+.rightlogin_box{
+    background-color: rgb(230, 216, 201);
+    width: 50%;
+    height: 100%;
+    float: right;
+   
+}
+.leftlogin_box{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 100%;
+    
+}
+.leftlogin_box img{
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0.6;
+    
+}
+.leftbr {
+    border-radius:  10px 0 0 10px;
+}
+.rightbr {
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+.user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #000000;
+	pointer-events: none;
+	transition:.5s ease;
+}
+.user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #020202;
+	margin-bottom: 3%;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+button {
+	background: transparent;
+	border: none;
+	color: #040404;
+	padding: 3% 5%;
+	cursor: pointer;
+	transition: background.5s;
+}
+
+.btn:hover {
+	background: #27ffff;
+    
+}
+.user-box {
+	position: relative;
+	margin: 30px 0;
+}
+.main-content {
+    padding: 10%;
+}
+
+.signup_box{
+    background-color: fuchsia;
+    width: 50%;
+    height: 60%;
+    border-radius: 20px;
+    box-shadow: 2px 5px 4px rgba(82, 78, 78, 0.719);
+    transition: opacity 2s;
+
+    /* display: none; */
+}
+.display {
+    display: none;
+    opacity: 0;
+    
+}
+.m-7 {
+    margin: 7% 0;
+}
+.passerror {
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: 150px;
+    background-color: rgba(255, 0, 0, 0.564);
+    transform: translate(350px,130px);
+    /* transform:  scale(1.5); */
+    transition: all 0.5s;
+    
+}
+
+.closeerror {
+    float: right;
+}
+.passerror h3 {
+    color: rgb(60, 5, 5);
+    text-align: center;
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+.successhand{
+    display: flex;	
+    background-color: rgba(20, 224, 71, 0.642);
+    z-index: 1;
+    text-align: center;
+	color: #0f520f;
+	border-radius: 0 10px 0 0;
+    
+}
+.successhand button:hover{
+	background-color: red;
+	border-radius: 0 10px 0 0;
+	
+}
+ 

@@ -1,0 +1,22 @@
+{% extends 'header.html' %}
+{% block style %}../static/css/Complaint.css{% endblock style %}
+{% block style2 %}../static/css/login.css{% endblock style2 %}
+{% block main %} 
+<div class="Complaint-container">
+
+    <form action="/complaint" method="POST">
+        {% csrf_token %}
+        <div class="user-box m-13">
+            <input type="text" name="address" required>
+            <label>Address</label>
+        </div>
+        <div class="user-box m-13">
+            <input type="text" name="Areacode" required>
+            <label>Areacode</label>
+        </div>
+        <textarea name="text" rows="5" cols="40" placeholder="Type your complaint here..."></textarea><br>
+        <button type="submit" class="complaint-submit">Submit</button>
+    </form>
+</div>
+</html>
+{%  endblock main %} 

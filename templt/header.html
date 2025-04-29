@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="{% block style %}{% endblock style %}">
+    <link rel="stylesheet" href="{% block style2 %}{% endblock style2 %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img  src="../static/img/icon.jpg" alt="">
+        <nav>
+            <ul>
+                <li><a href=""><b>Home</b></a></li>
+                <li><a href=""><b>About</b></a></li>
+                <li><a href=""><b>Contact</b></a></li>
+            </ul>
+        </nav>
+        {% if user.is_authenticated %}
+        <div class="signbtt"><a href="logout"> Logout </a></div>
+
+       {% else %}
+        <div class="signbtt"><a href="login"> SignIn </a></div>
+        {% endif %}
+    </header>
+    <main>
+        
+{% block main  %}
+{% endblock main %}
+    </main>
+    <footer></footer>
+    {% block script  %}
+    
+    {% endblock script %}
+</body>
+</html>
